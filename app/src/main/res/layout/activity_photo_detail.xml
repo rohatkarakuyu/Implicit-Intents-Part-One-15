@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoDetailActivity">
+    <EditText
+        android:id="@+id/photo_uuid"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:hint="uuid"
+        app:layout_constraintBottom_toTopOf="@id/photo_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/photo_title"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:hint="title"
+        app:layout_constraintBottom_toTopOf="@id/photo_url"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_uuid"/>
+
+    <EditText
+        android:id="@+id/photo_url"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:hint="url"
+        app:layout_constraintBottom_toTopOf="@id/save_photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_title"/>
+
+    <Button
+        android:id="@+id/save_photo"
+        android:text="@string/save_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/photo_url"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/choose_person_button"
+        android:text="@string/photo_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/save_photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
